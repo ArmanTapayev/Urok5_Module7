@@ -104,8 +104,12 @@ void main()
 			case 8:
 			{
 			/*Напишите программу в C, чтобы преобразовать десятичное число в шестнадцатеричное.*/
-
-
+				int number;
+				printf("Введите десятичное число: ");
+				scanf("%d", &number);
+				//hexNum(number);
+				hexNumReverse(number);
+				//printf("%d - %c", number, hexNum(number));
 
 			printf("\n");
 			system("pause");

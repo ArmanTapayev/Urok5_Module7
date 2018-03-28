@@ -21,6 +21,7 @@ int primeNumber(int n)
 	return flag;
 }
 
+/*Напишите программу в C, чтобы преобразовать десятичное число в шестнадцатеричное.*/
 char hexNum(int x)
 {
 	switch (x)
@@ -64,4 +65,31 @@ void hexNumReverse(int x)
 		{
 			printf("%c", hex[i]);
 		}
+}
+
+/*Напишите программу c для ввода и печати возраста, который должен быть больше 18 и
+менее 30 лет, необходимо проверить возрастную проверку и ввести возраст рекурсивно
+до тех пор, пока значение возраста не будет действительным.*/
+int ageUpward(int age)
+{
+	if (age == 18)
+		return 18;
+	return ageUpward(age + 1);
+}
+
+int ageDownward(int age)
+{
+	if (age == 30)
+		return 30;
+	return ageDownward(age-1);
+}
+
+/*Напишите программу c для ввода n чисел, напечатайте их сумму и наибольшее число,
+не сохраняя их в массиве.*/
+void maxSum(int *b, int *sum, int *max)
+{
+
+	if (*max < *b)
+		*max = *b;
+	*sum += *b;
 }

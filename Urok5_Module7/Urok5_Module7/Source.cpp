@@ -122,7 +122,31 @@ void main()
 			/*Напишите программу c для чтения времени в формате HH24: MM: SS с использованием оператора
 			single scanf (), убедитесь, что входное значение должно быть правильным, если входные значения 
 			неверны, прочитайте их рекурсивно; распечатать время в HH24: MM: SS, если значения верны.*/
+				int HH, MM, SS;
 
+				printf("Введите время в формате HH24:MM:SS - ");
+				scanf("%d:%d:%d", &HH, &MM, &SS);
+
+				if (HH>24)
+				{
+					printf("Вы ввели часы HH как %d, правильный формат: %d:%d:%d\n", HH, rightHour(HH), MM, SS);
+				}
+
+				else if (MM>60)
+				{
+					printf("Вы ввели минуты MM как %d, правильный формат: %d:%d:%d\n", MM, HH, rightMinute(MM), SS);
+				}
+
+				else if (SS>60)
+				{
+					printf("Вы ввели секунды SS как %d, правильный формат: %d:%d:%d\n", SS, HH, MM, rightSecond(SS));
+				}
+				else
+					printf("Введенное время %d:%d:%d\n", HH, MM, SS);
+
+				printf("\n");
+				system("pause");
+				system("cls");
 
 			}break;
 
@@ -138,7 +162,7 @@ void main()
 
 				if (age < 18)
 				{
-					rightAge =ageUpward(age);
+					rightAge = ageUpward(age);
 					printf("Ваш возраст %d, необходимый возраст %d", age, rightAge);
 				}
 				if (age > 30) 

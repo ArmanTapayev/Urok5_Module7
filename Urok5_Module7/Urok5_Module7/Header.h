@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 int primeNumber(int n);
 char hexNum(int x);
@@ -9,3 +9,5 @@ int rightMinute(int MM);
 int rightSecond(int SS);
 int ageUpward(int age);
 int ageDownward(int age);
+void foo();
+void foo2();

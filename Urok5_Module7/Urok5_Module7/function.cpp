@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<stdio.h>
 #include<locale.h>
 #include<math.h>
@@ -117,3 +117,34 @@ void maxSum(int *b, int *sum, int *max)
 		*max = *b;
 	*sum += *b;
 }
+
+void foo()
+{
+	char *string, *x;
+
+	string = (char *)malloc(20);
+
+	strcpy(string, "Hello World.");
+
+	x = string;
+
+		for (; *x != '\0'; x++) 
+		{
+			printf("%c", *x);
+		}
+
+	printf("\n");
+
+}
+
+void foo2() 
+{
+	int x, *y;
+
+	x = 30;
+	y = &x;
+	y++;
+
+	printf("x=%d y=%d\n", x, *y);
+}
+
